@@ -1,4 +1,5 @@
-package com.github.alelk.template_kotlin_springboot_webflux_r2dbc.app.config
+
+package com.github.alelk.kotlin_exercises.excercise01.user_activity_service
 
 import org.springframework.boot.context.properties.ConfigurationProperties
 import org.springframework.context.annotation.Configuration
@@ -8,7 +9,6 @@ import org.springframework.web.reactive.config.EnableWebFlux
 import org.springframework.web.reactive.config.WebFluxConfigurer
 
 @Configuration
-@EnableWebFlux
 class ApiConfig : WebFluxConfigurer {
 
   @ConfigurationProperties("rest-api.cors")

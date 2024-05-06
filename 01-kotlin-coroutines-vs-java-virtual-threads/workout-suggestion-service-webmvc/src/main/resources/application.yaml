@@ -1,20 +1,11 @@
-server.port: 8080
-spring.application.name: User Activity Service
+server.port: 8081
+spring.application.name: User Workout Suggestion Service (WebMvc)
 
 server.error:
   include-message: always
   include-binding-errors: always
   include-exception: false
   include-stacktrace: always
-
-# api
-rest-api.cors:
-  allowed-origin-patterns: "*"
-  allowed-methods: "*"
-  allowed-headers: "*"
-  exposed-headers: "Authorization, Content-Type"
-  allow-credentials: true
-  max-age: 3600
 
 # api docs
 springdoc:

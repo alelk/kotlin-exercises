@@ -2,7 +2,7 @@
 
 kotlin = "1.9.23"
 
-springBoot = "3.2.5"
+springBoot = "3.2.0"
 spring-dependencyManagement = "1.1.4"
 
 springdoc-openApi = "2.5.0"
@@ -15,7 +15,8 @@ kotest = "5.8.0"
 # Api documentation
 springdoc-openapi-starter-webflux-ui = { module = "org.springdoc:springdoc-openapi-starter-webflux-ui", version.ref = "springdoc-openApi" } # https://search.maven.org/artifact/org.springdoc/springdoc-openapi-starter-webflux-ui
 springdoc-openapi-starter-webflux-api = { module = "org.springdoc:springdoc-openapi-starter-webflux-api", version.ref = "springdoc-openApi" } # https://search.maven.org/artifact/org.springdoc/springdoc-openapi-starter-webflux-api
-springdoc-openapi-starter-common = { module = "org.springdoc:springdoc-openapi-starter-common", version.ref = "springdoc-openApi" } # https://search.maven.org/artifact/org.springdoc/springdoc-openapi-starter-common
+springdoc-openapi-starter-webmvc-ui = { module = "org.springdoc:springdoc-openapi-starter-webmvc-ui", version.ref = "springdoc-openApi" } # https://search.maven.org/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui
+springdoc-openapi-starter-webmvc-api = { module = "org.springdoc:springdoc-openapi-starter-webmvc-api", version.ref = "springdoc-openApi" } # https://search.maven.org/artifact/org.springdoc/springdoc-openapi-starter-webmvc-api
 
 # Test
 kotest-runner-junit5 = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" } # https://search.maven.org/artifact/io.kotest/kotest-runner-junit5

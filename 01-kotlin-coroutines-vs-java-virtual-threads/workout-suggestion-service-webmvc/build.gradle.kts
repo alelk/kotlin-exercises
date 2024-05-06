@@ -8,16 +8,12 @@ plugins {
 dependencies {
 
   /* Spring */
-  implementation("org.springframework.boot:spring-boot-starter-webflux")
+  implementation("org.springframework.boot:spring-boot-starter-web")
 
   /* Api docs */
-  implementation(libs.springdoc.openapi.starter.webflux.ui)
-  implementation(libs.springdoc.openapi.starter.webflux.api)
+  implementation(libs.springdoc.openapi.starter.webmvc.ui)
+  implementation(libs.springdoc.openapi.starter.webmvc.api)
 
   /* Serialization */
   implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-
-  /* Kotlin support */
-  implementation("org.jetbrains.kotlin:kotlin-reflect")
-  implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
 }
