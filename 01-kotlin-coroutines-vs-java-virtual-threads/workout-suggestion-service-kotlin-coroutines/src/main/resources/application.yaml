@@ -1,0 +1,35 @@
+server.port: 8084
+spring.application.name: User Workout Suggestion Service (Kotlin Coroutines)
+
+spring.threads.virtual.enabled: false
+
+server.error:
+  include-message: always
+  include-binding-errors: always
+  include-exception: false
+  include-stacktrace: always
+
+# api docs
+springdoc:
+  swagger-ui:
+    path: /docs
+  api-docs:
+    enabled: true
+    path: /docs/api-v${springdoc.api-docs.api-version}
+    api-version: 0.0.1
+
+
+# logging configuration
+spring.output.ansi.enabled: detect
+logging:
+  file.name: logs/workout-suggestion-service-kotlin-coroutines.log
+  level:
+    root: info
+    org.springframework.web: debug
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %highlight(%-5level) %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
+      max-history: 30

@@ -5,6 +5,7 @@ include(
   "workout-suggestion-service-webmvc",
   "workout-suggestion-service-webflux",
   "workout-suggestion-service-virtual-threads",
+  "workout-suggestion-service-kotlin-coroutines",
   "load-test"
 )
 

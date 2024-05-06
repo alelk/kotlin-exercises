@@ -7,9 +7,9 @@ import io.gatling.javaapi.http.HttpDsl.status
 import kotlin.random.Random
 
 //val baseUrl = "http://localhost:8081/" // WebMvc
-val baseUrl = "http://localhost:8082/" // WebFlux
+//val baseUrl = "http://localhost:8082/" // WebFlux
 //val baseUrl = "http://localhost:8083/" // Virtual Threads
-//val baseUrl = "http://localhost:8084/" // Kotlin Coroutines
+val baseUrl = "http://localhost:8084/" // Kotlin Coroutines
 
 class LoadScenario : Simulation() {
   init {
