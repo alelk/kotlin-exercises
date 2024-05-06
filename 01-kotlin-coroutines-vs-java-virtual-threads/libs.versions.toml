@@ -9,7 +9,7 @@ springdoc-openApi = "2.5.0"
 
 kotest = "5.8.0"
 
-gatlingGradle = "3.11.2"
+gatlingGradle = "3.11.1"
 
 
 [libraries]
