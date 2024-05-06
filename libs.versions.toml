@@ -5,10 +5,17 @@ kotlin = "1.9.23"
 springBoot = "3.2.5"
 spring-dependencyManagement = "1.1.4"
 
+springdoc-openApi = "2.5.0"
+
 kotest = "5.8.0"
 
 
 [libraries]
+
+# Api documentation
+springdoc-openapi-starter-webflux-ui = { module = "org.springdoc:springdoc-openapi-starter-webflux-ui", version.ref = "springdoc-openApi" } # https://search.maven.org/artifact/org.springdoc/springdoc-openapi-starter-webflux-ui
+springdoc-openapi-starter-webflux-api = { module = "org.springdoc:springdoc-openapi-starter-webflux-api", version.ref = "springdoc-openApi" } # https://search.maven.org/artifact/org.springdoc/springdoc-openapi-starter-webflux-api
+springdoc-openapi-starter-common = { module = "org.springdoc:springdoc-openapi-starter-common", version.ref = "springdoc-openApi" } # https://search.maven.org/artifact/org.springdoc/springdoc-openapi-starter-common
 
 # Test
 kotest-runner-junit5 = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" } # https://search.maven.org/artifact/io.kotest/kotest-runner-junit5
@@ -20,4 +27,4 @@ kotest-property = { module = "io.kotest:kotest-property", version.ref = "kotest"
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" } # https://plugins.gradle.org/plugin/org.jetbrains.kotlin.jvm
 kotlin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" } # https://plugins.gradle.org/plugin/org.jetbrains.kotlin.plugin.spring
 springBoot = { id = "org.springframework.boot", version.ref = "springBoot" }
-spring-dependencyManagement = {id = "io.spring.dependency-management", version.ref = "spring-dependencyManagement"}
+spring-dependencyManagement = { id = "io.spring.dependency-management", version.ref = "spring-dependencyManagement" }

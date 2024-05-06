@@ -12,6 +12,10 @@ dependencies {
   /* Spring */
   implementation("org.springframework.boot:spring-boot-starter-webflux")
 
+  /* Api docs */
+  implementation(libs.springdoc.openapi.starter.webflux.ui)
+  implementation(libs.springdoc.openapi.starter.webflux.api)
+
   /* Serialization */
   implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 
