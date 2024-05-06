@@ -1,6 +1,6 @@
-rootProject.name = "template-kotlin-springboot-webflux-r2dbc"
+rootProject.name = "kotlin-coroutines-vs-java-virtual-threads"
 
-include("core", "app")
+include("user-activity-service")
 
 dependencyResolutionManagement {
     versionCatalogs {
