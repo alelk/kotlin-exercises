@@ -29,7 +29,7 @@ springdoc:
 # logging configuration
 spring.output.ansi.enabled: detect
 logging:
-  file.name: logs/app.log
+  file.name: logs/user-activity-service.log
   level:
     root: info
     org.springframework.web: debug

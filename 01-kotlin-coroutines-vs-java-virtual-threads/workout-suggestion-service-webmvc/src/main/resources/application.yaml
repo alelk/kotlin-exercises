@@ -22,7 +22,7 @@ springdoc:
 # logging configuration
 spring.output.ansi.enabled: detect
 logging:
-  file.name: logs/app.log
+  file.name: logs/workout-suggestion-service-webmvc.log
   level:
     root: info
     org.springframework.web: debug
