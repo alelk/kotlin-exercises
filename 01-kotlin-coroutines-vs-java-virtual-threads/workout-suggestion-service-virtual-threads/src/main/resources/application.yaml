@@ -1,7 +1,7 @@
-server.port: 8081
-spring.application.name: User Workout Suggestion Service (WebMvc)
+server.port: 8083
+spring.application.name: User Workout Suggestion Service (Virtual Threads)
 
-spring.threads.virtual.enabled: false
+spring.threads.virtual.enabled: true
 
 server.error:
   include-message: always
