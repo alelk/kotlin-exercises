@@ -1,6 +1,9 @@
 rootProject.name = "kotlin-coroutines-vs-java-virtual-threads"
 
-include("user-activity-service")
+include(
+  "user-activity-service",
+  "workout-suggestion-service-webmvc"
+)
 
 dependencyResolutionManagement {
     versionCatalogs {
