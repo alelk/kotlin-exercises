@@ -6,8 +6,6 @@ plugins {
 }
 
 dependencies {
-  /* Project modules */
-  implementation(project(":core"))
 
   /* Spring */
   implementation("org.springframework.boot:spring-boot-starter-webflux")
@@ -23,8 +21,4 @@ dependencies {
   implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
   implementation("org.jetbrains.kotlin:kotlin-reflect")
   implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
-
-  /* Test */
-  testImplementation("org.springframework.boot:spring-boot-starter-test")
-  testImplementation("io.projectreactor:reactor-test")
 }
