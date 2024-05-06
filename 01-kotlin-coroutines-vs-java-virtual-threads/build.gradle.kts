@@ -5,6 +5,7 @@ plugins {
   alias(libs.plugins.spring.dependencyManagement) apply false
   alias(libs.plugins.kotlin.spring) apply false
   alias(libs.plugins.kotlin.jvm)
+  alias(libs.plugins.gatling)
 }
 
 java {

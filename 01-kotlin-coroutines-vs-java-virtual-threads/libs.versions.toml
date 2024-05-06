@@ -9,6 +9,8 @@ springdoc-openApi = "2.5.0"
 
 kotest = "5.8.0"
 
+gatlingGradle = "3.11.2"
+
 
 [libraries]
 
@@ -29,3 +31,4 @@ kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" } # https
 kotlin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" } # https://plugins.gradle.org/plugin/org.jetbrains.kotlin.plugin.spring
 springBoot = { id = "org.springframework.boot", version.ref = "springBoot" }
 spring-dependencyManagement = { id = "io.spring.dependency-management", version.ref = "spring-dependencyManagement" }
+gatling = { id = "io.gatling.gradle", version.ref = "gatlingGradle" } # https://plugins.gradle.org/plugin/io.gatling.gradle

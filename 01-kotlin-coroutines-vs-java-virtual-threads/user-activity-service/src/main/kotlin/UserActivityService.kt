@@ -25,11 +25,11 @@ class UserActivityService {
       steps = Random.nextInt(until = 50_000),
       calories = Random.nextInt(until = 5000),
       distance = Random.nextDouble(until = 100.0)
-    ).also { delay(1.seconds) }
+    ).also { delay(2.seconds) }
 
   @GetMapping("/users/{userId}/fitness-goals")
   suspend fun getUserFitnessGoals(@PathVariable userId: Long) =
-    List((0..2).random()) { FitnessGoal.entries.random() }.also { delay(1.seconds) }
+    List((0..2).random()) { FitnessGoal.entries.random() }.also { delay(2.seconds) }
 }
 
 fun main(args: Array<String>) {
