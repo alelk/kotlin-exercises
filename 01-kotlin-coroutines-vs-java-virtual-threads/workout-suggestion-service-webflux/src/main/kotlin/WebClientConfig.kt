@@ -1,4 +1,4 @@
-package com.github.alelk.kotlin_exercises.excercise01.workout_suggestion_service.webmvc
+package com.github.alelk.kotlin_exercises.excercise01.workout_suggestion_service.kotlin_coroutines
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
@@ -19,7 +19,8 @@ class WebClientConfig {
           HttpClient.create(
             ConnectionProvider
               .builder("user-activity-svc-client")
-              .maxConnections(500).build()
+              .pendingAcquireMaxCount(2000)
+              .maxConnections(2000).build()
           )
         )
       )

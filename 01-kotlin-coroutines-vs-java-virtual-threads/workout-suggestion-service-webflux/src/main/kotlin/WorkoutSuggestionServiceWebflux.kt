@@ -1,6 +1,6 @@
-package com.github.alelk.kotlin_exercises.excercise01.workout_suggestion_service.webmvc
+package com.github.alelk.kotlin_exercises.excercise01.workout_suggestion_service.kotlin_coroutines
 
-import com.github.alelk.kotlin_exercises.excercise01.workout_suggestion_service.webmvc.Workout.*
+import com.github.alelk.kotlin_exercises.excercise01.workout_suggestion_service.kotlin_coroutines.Workout.*
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 import org.springframework.http.HttpMethod
