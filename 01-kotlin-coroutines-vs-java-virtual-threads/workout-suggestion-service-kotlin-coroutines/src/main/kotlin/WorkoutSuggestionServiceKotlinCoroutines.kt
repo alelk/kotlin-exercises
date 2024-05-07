@@ -4,6 +4,7 @@ import com.github.alelk.kotlin_exercises.excercise01.workout_suggestion_service.
 import io.ktor.client.*
 import io.ktor.client.call.*
 import io.ktor.client.request.*
+import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.async
 import kotlinx.coroutines.coroutineScope
 import org.springframework.boot.autoconfigure.SpringBootApplication
@@ -39,8 +40,8 @@ class WorkoutSuggestionServiceKotlinCoroutines(val httpClient: HttpClient) {
   @GetMapping("/users/{userId}/workout-suggestions")
   suspend fun getUserWorkoutSuggestions(@PathVariable userId: Long): List<Workout> =
     coroutineScope {
-      val activitySummaryDeferred = async { fetchActivitySummary(userId) }
-      val fitnessGoalsDeferred = async { fetchFitnessGoals(userId) }
+      val activitySummaryDeferred: Deferred<ActivitySummary> = async { fetchActivitySummary(userId) }
+      val fitnessGoalsDeferred: Deferred<List<FitnessGoal>> = async { fetchFitnessGoals(userId) }
 
       suggestWorkout(activitySummaryDeferred.await(), fitnessGoalsDeferred.await())
     }

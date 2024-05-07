@@ -45,8 +45,12 @@ class WorkoutSuggestionServiceWebmvc(val restTemplate: RestTemplate) {
 
   @GetMapping("/users/{userId}/workout-suggestions")
   fun getUserWorkoutSuggestions(@PathVariable userId: Long): List<Workout> {
-    val activitySummary = fetchActivitySummary(userId) ?: return emptyList()
-    val fitnessGoals = fetchFitnessGoals(userId) ?: return emptyList()
+    val activitySummary =
+      fetchActivitySummary(userId) // блокирующий вызов
+        ?: return emptyList()
+    val fitnessGoals =
+      fetchFitnessGoals(userId) // блокирующий вызов
+        ?: return emptyList()
     return suggestWorkout(activitySummary, fitnessGoals)
   }
 

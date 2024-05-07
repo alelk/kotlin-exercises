@@ -45,8 +45,8 @@ class WorkoutSuggestionServiceWebflux(val webClient: WebClient) {
 
   @GetMapping("/users/{userId}/workout-suggestions")
   fun getUserWorkoutSuggestions(@PathVariable userId: Long): Flux<Workout> {
-    val activitySummaryMono = fetchActivitySummary(userId)
-    val fitnessGoalsMono = fetchFitnessGoals(userId).collectList()
+    val activitySummaryMono: Mono<ActivitySummary> = fetchActivitySummary(userId)
+    val fitnessGoalsMono: Mono<List<FitnessGoal>> = fetchFitnessGoals(userId).collectList()
 
     return Flux.zip(activitySummaryMono, fitnessGoalsMono).flatMap { r ->
       val activitySummary = r.t1

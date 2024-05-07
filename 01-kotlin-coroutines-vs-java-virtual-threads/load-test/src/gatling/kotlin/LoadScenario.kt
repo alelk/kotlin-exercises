@@ -23,6 +23,6 @@ class LoadScenario : Simulation() {
           )
         )
 
-    setUp(scn.injectOpen(atOnceUsers(1_000)))
+    setUp(scn.injectOpen(atOnceUsers(400)))
   }
 }

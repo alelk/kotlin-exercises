@@ -1,11 +1,11 @@
+spring.threads.virtual.enabled: true
+
 server.port: 8083
 spring.application.name: User Workout Suggestion Service (Virtual Threads)
 
-spring.threads.virtual.enabled: true
-
 server.error:
   include-message: always
-  include-binding-errors: always
+  include-binding-errors: always›
   include-exception: false
   include-stacktrace: always
 
