@@ -46,6 +46,9 @@ class WorkoutSuggestionServiceKotlinCoroutines(val httpClient: HttpClient) {
       suggestWorkout(activitySummaryDeferred.await(), fitnessGoalsDeferred.await())
     }
 
+  @GetMapping("/health")
+  fun healthCheck(): String = "running"
+
 }
 
 fun main(args: Array<String>) {

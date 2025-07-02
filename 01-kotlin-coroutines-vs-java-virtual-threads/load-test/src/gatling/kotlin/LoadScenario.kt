@@ -20,6 +20,10 @@ class LoadScenario : Simulation() {
             http("Get workout suggestions")
               .get("$baseUrl/users/${Random.nextInt()}/workout-suggestions")
               .check(status().shouldBe(200))
+          ).exec(
+            http("Health check")
+              .get("$baseUrl/health")
+              .check(status().shouldBe(200))
           )
         )
 

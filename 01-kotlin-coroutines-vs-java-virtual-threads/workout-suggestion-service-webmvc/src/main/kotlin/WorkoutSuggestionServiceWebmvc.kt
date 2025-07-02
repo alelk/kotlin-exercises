@@ -43,6 +43,7 @@ class WorkoutSuggestionServiceWebmvc(val restTemplate: RestTemplate) {
     else if (fitnessGoals.contains(FitnessGoal.BUILD_MUSCLE_STRENGTH)) strengthExercises.shuffled().take(2)
     else emptyList()
 
+
   @GetMapping("/users/{userId}/workout-suggestions")
   fun getUserWorkoutSuggestions(@PathVariable userId: Long): List<Workout> {
     val activitySummary =
@@ -53,6 +54,10 @@ class WorkoutSuggestionServiceWebmvc(val restTemplate: RestTemplate) {
         ?: return emptyList()
     return suggestWorkout(activitySummary, fitnessGoals)
   }
+
+
+  @GetMapping("/health")
+  fun healthCheck(): String = "running"
 
 }
 

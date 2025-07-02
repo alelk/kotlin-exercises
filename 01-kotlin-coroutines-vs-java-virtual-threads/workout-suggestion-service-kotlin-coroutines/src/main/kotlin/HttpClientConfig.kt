@@ -16,13 +16,13 @@ class HttpClientConfig {
     install(ContentNegotiation) { jackson() }
     defaultRequest { url("http://127.0.0.1:8080/") }
     engine {
-      maxConnectionsCount = 2000
+      maxConnectionsCount = 50
       endpoint {
         connectTimeout = 30_000
         requestTimeout = 30_000
-        maxConnectionsCount = 2000
+        maxConnectionsCount = 50
         keepAliveTime = 20_000
-        maxConnectionsPerRoute = 1000
+        maxConnectionsPerRoute = 50
         pipelineMaxSize = 20
       }
     }

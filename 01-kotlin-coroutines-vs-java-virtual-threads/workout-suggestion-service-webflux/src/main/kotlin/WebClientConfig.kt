@@ -19,8 +19,8 @@ class WebClientConfig {
           HttpClient.create(
             ConnectionProvider
               .builder("user-activity-svc-client")
-              .pendingAcquireMaxCount(2000)
-              .maxConnections(2000).build()
+              .pendingAcquireMaxCount(1000)
+              .maxConnections(50).build()
           )
         )
       )

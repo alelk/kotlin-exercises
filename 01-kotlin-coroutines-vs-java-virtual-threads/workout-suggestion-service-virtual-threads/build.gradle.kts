@@ -14,6 +14,9 @@ dependencies {
   implementation(libs.springdoc.openapi.starter.webmvc.ui)
   implementation(libs.springdoc.openapi.starter.webmvc.api)
 
+  /* Http Client */
+  implementation(libs.httpclient)
+
   /* Serialization */
   implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 }

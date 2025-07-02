@@ -55,6 +55,9 @@ class WorkoutSuggestionServiceWebflux(val webClient: WebClient) {
     }
   }
 
+  @GetMapping("/health")
+  fun healthCheck(): Mono<String> = Mono.just("running")
+
 }
 
 fun main(args: Array<String>) {

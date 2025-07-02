@@ -1,17 +1,15 @@
 [versions]
 
-kotlin = "1.9.23"
+kotlin = "2.2.0"
 
-springBoot = "3.2.0"
-spring-dependencyManagement = "1.1.4"
+springBoot = "3.5.3"
+spring-dependencyManagement = "1.1.7"
 
-springdoc-openApi = "2.5.0"
+springdoc-openApi = "2.8.9"
 
-ktor = "2.3.10"
+ktor = "3.2.0"
 
-kotest = "5.8.0"
-
-gatlingGradle = "3.11.1"
+gatlingGradle = "3.14.3"
 
 
 [libraries]
@@ -22,21 +20,21 @@ springdoc-openapi-starter-webflux-api = { module = "org.springdoc:springdoc-open
 springdoc-openapi-starter-webmvc-ui = { module = "org.springdoc:springdoc-openapi-starter-webmvc-ui", version.ref = "springdoc-openApi" } # https://search.maven.org/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui
 springdoc-openapi-starter-webmvc-api = { module = "org.springdoc:springdoc-openapi-starter-webmvc-api", version.ref = "springdoc-openApi" } # https://search.maven.org/artifact/org.springdoc/springdoc-openapi-starter-webmvc-api
 
+# HttpClient
+
+httpclient = { module = "org.apache.httpcomponents.client5:httpclient5", version = "5.5" } # https://search.maven.org/artifact/org.apache.httpcomponents.client5/httpclient5
+
 # Ktor client
 ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
 ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }
 ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
 ktor-serialization-jackson = { module = "io.ktor:ktor-serialization-jackson", version.ref = "ktor" } # https://search.maven.org/artifact/io.ktor/ktor-serialization-jackson
 
-# Test
-kotest-runner-junit5 = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" } # https://search.maven.org/artifact/io.kotest/kotest-runner-junit5
-kotest-assertions-core = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" } # https://search.maven.org/artifact/io.kotest/kotest-assertions-core
-kotest-property = { module = "io.kotest:kotest-property", version.ref = "kotest" } # https://search.maven.org/artifact/io.kotest/kotest-property
 
 [plugins]
 
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" } # https://plugins.gradle.org/plugin/org.jetbrains.kotlin.jvm
 kotlin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" } # https://plugins.gradle.org/plugin/org.jetbrains.kotlin.plugin.spring
-springBoot = { id = "org.springframework.boot", version.ref = "springBoot" }
-spring-dependencyManagement = { id = "io.spring.dependency-management", version.ref = "spring-dependencyManagement" }
+springBoot = { id = "org.springframework.boot", version.ref = "springBoot" } # https://plugins.gradle.org/plugin/org.springframework.boot
+spring-dependencyManagement = { id = "io.spring.dependency-management", version.ref = "spring-dependencyManagement" } # https://plugins.gradle.org/plugin/io.spring.dependency-management
 gatling = { id = "io.gatling.gradle", version.ref = "gatlingGradle" } # https://plugins.gradle.org/plugin/io.gatling.gradle
