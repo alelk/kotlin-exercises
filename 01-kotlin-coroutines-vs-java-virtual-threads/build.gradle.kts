@@ -9,7 +9,7 @@ plugins {
 }
 
 java {
-  sourceCompatibility = JavaVersion.VERSION_21
+  sourceCompatibility = JavaVersion.VERSION_23
 }
 
 allprojects {
@@ -20,9 +20,13 @@ allprojects {
     mavenCentral()
   }
 
+  tasks.withType<JavaCompile> {
+    options.release.set(23)
+  }
+
   tasks.withType<KotlinCompile> {
     compilerOptions {
-      jvmTarget = JvmTarget.JVM_21
+      jvmTarget = JvmTarget.JVM_23
     }
   }
 

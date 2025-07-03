@@ -52,11 +52,10 @@ class WorkoutSuggestionServiceVirtualThreads(val restTemplate: RestTemplate) {
       fetchFitnessGoals(userId)
         ?: return emptyList()
     return suggestWorkout(activitySummary, fitnessGoals)
-
-    @GetMapping("/health")
-    fun healthCheck(): String = "running"
   }
 
+  @GetMapping("/health")
+  fun healthCheck(): String = "running"
 }
 
 fun main(args: Array<String>) {

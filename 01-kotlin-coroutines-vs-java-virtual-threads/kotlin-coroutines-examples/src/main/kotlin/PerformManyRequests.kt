@@ -15,7 +15,7 @@ fun main() {
           launch {
             kotlin.runCatching {
               httpClient
-                .get("/users/${Random.nextInt(10_000)}/activity-summary")
+                .get("/users/${Random.nextInt(1_000)}/activity-summary")
                 .body<ActivitySummary>()
             }.onSuccess {
               println(it)

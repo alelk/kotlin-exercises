@@ -10,13 +10,13 @@ val httpClient = HttpClient(CIO) {
   install(ContentNegotiation) { jackson() }
   defaultRequest { url("http://127.0.0.1:8080/") }
   engine {
-    maxConnectionsCount = 400
+    maxConnectionsCount = 1000
     endpoint {
       connectTimeout = 30_000
       requestTimeout = 30_000
-      maxConnectionsCount = 400
+      maxConnectionsCount = 1000
       keepAliveTime = 20_000
-      maxConnectionsPerRoute = 400
+      maxConnectionsPerRoute = 1000
       pipelineMaxSize = 20
     }
   }
